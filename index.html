@@ -1,67 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <title>Counter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Counter App</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    animation: {
-                        'bounce-in': 'bounceIn 0.3s ease-out',
-                        'pulse-slow': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        bounceIn: {
-                            '0%': { transform: 'scale(0.8)', opacity: '0.5' },
-                            '50%': { transform: 'scale(1.1)', opacity: '0.8' },
-                            '100%': { transform: 'scale(1)', opacity: '1' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
 </head>
-<body class="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 min-h-screen flex items-center justify-center font-sans">
-    <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 shadow-2xl border border-white/20 max-w-md w-full mx-4">
-        <!-- Header -->
-        <div class="text-center mb-8">
-            <h1 class="text-4xl font-bold text-white mb-2 tracking-tight">Counter App</h1>
-            <p class="text-blue-200 text-lg">Click the buttons to count!</p>
-        </div>
 
-        <!-- Counter Display -->
+<body class="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 min-h-screen flex items-center justify-center font-sans">
+    <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 shadow-2xl border border-white/10 max-w-md w-full mx-4">
         <div class="text-center mb-8">
-            <div class="bg-white/20 rounded-2xl p-6 mb-4 backdrop-blur-sm border border-white/30">
-                <span id="counter" class="text-6xl font-bold text-white block transition-all duration-300 ease-out">0</span>
+            <h1 class="text-4xl text-blue-600 dark:text-sky-400 font-semibold" style="font-family: Arial, Helvetica, sans-serif;">This is a simple counter</h1>
+            <p class="text-2xl text-blue-200 dark:text-gray-20 px-10 py-3">Click on the buttons to increase or decrease</p>
+        </div>
+        <div class="text-center mb-8">
+            <div class="bg-white/15 rounded-2xl border">
+                <span id="counter"
+                    class="text-6xl font-bold text-white block transition-all duration-300 ease-out">0</span>
             </div>
         </div>
 
-        <!-- Control Buttons -->
         <div class="flex gap-4 justify-center mb-6">
-            <button id="decrementBtn" 
+            <button id="decrementBtn"
                 class="bg-red-500 hover:bg-red-600 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100">
                 <span class="text-2xl">-</span>
             </button>
-            
-            <button id="incrementBtn" 
-                class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl">
+
+            <button id="incrementBtn"
+                class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100">
                 <span class="text-2xl">+</span>
             </button>
         </div>
 
-        <!-- Reset Button -->
         <div class="text-center mb-6">
-            <button id="resetBtn" 
-                class="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">
+            <button id="resetBtn"
+                class="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 hover:scale-105 active:scale-105 shadow-md hover:shadow-lg">
                 Reset
             </button>
         </div>
 
-        <!-- Stats -->
         <div class="bg-white/10 rounded-2xl p-4 backdrop-blur-sm border border-white/20">
             <div class="grid grid-cols-3 gap-4 text-center text-sm">
                 <div>
@@ -72,6 +50,7 @@
                     <div class="text-blue-200 font-semibold">Max Value</div>
                     <div id="maxValue" class="text-white font-bold text-lg">0</div>
                 </div>
+
                 <div>
                     <div class="text-blue-200 font-semibold">Min Value</div>
                     <div id="minValue" class="text-white font-bold text-lg">0</div>
@@ -80,6 +59,7 @@
         </div>
     </div>
 
-    <script src="CounterApp.js"></script>
+    <script src="Counter.js"></script>
 </body>
+
 </html>
